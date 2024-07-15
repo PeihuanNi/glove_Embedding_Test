@@ -58,6 +58,7 @@ def dot_attention_max(tensor, matrix):
 |mother   |65.79%     |
 |elizabeth|65.63%     |
 |father   |63.92%     |
+
 可以看到余弦相似度在这里要比点积注意力的效果要好的多，因为没有softmax来增大差异
 
 经过多次实验，使用不同单词发现，相似度最大的总是位于king那个位置的单词，可能这也是为什么主流的transformer架构会在topk（k一般为3）里面随机取一个的原因。
