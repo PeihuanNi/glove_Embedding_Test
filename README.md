@@ -30,7 +30,7 @@ def dot_attention_max(tensor, matrix):
 |son      |0.01%      |
 |mother   |0.01%      |
 
-                    可见$DotAttention+Softmax$并不是一个很好的方法，他会极大的抑制这个较小的值
+可见$DotAttention+Softmax$并不是一个很好的方法，他会极大的抑制这个较小的值
 
 ### 余弦相似度
 余弦相似度其实和点积注意力本质上相同，但是余弦相似度除以了向量的模，得到的就是向量间的$\cos$，并且由于cos的值域在$(-1, 1)$，所以他就可以作为$Similarity$
@@ -58,6 +58,6 @@ def dot_attention_max(tensor, matrix):
 |mother   |65.79%     |
 |elizabeth|65.63%     |
 |father   |63.92%     |
-                    可以看到余弦相似度在这里要比点积注意力的效果要好的多，因为没有softmax来增大差异
+可以看到余弦相似度在这里要比点积注意力的效果要好的多，因为没有softmax来增大差异
 
 经过多次实验，使用不同单词发现，相似度最大的总是位于king那个位置的单词，可能这也是为什么主流的transformer架构会在topk（k一般为3）里面随机取一个的原因。
