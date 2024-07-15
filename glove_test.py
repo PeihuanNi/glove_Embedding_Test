@@ -29,7 +29,7 @@ def create_embedding_matrix(embeddings_dict, embedding_dim):
     return word_to_idx, idx_to_word, embedding_matrix
 
 # Specify the path to the GloVe file and the embedding dimension
-glove_file_path = 'glove.6B.100d.txt'  # Replace with your GloVe file path
+glove_file_path = 'D:/Dataset/glove.6B/glove.6B.100d.txt'  # Replace with your GloVe file path
 embedding_dim = 100
 
 # Load the GloVe embeddings
@@ -74,7 +74,7 @@ word1 = "man"
 vector1 = word_to_vector(word1)
 word2 = "woman"
 vector2 = word_to_vector(word2)
-word3 = 'duke'
+word3 = 'king'
 vector3 = word_to_vector(word3)
 result_vec = -vector1 + vector2 + vector3
 # result_cos, _, result_idx_cos = cosine_similarity_max(result_vec, embedding_matrix)
